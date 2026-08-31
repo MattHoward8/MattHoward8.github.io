@@ -4,78 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matt Howard - Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; max-width: 800px; }
-        header { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f4f4f4; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --primary-color: #0d6efd;
+            --dark-bg: #212529;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 5rem 0;
+        }
+        .section-padding {
+            padding: 4rem 0;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Matt Howard</h1>
-        <p>Information Systems Student | University of Utah 2028</p>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Matt Howard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Matt Howard</h1>
+            <p class="lead text-primary mb-2">Information Systems Student</p>
+
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>My name is Matt Howard. I am a 3rd year student at the University of Utah studying Information Systems. I plan to graduate in 2028 and plan on pursuing a master's in Information Systems with the University of Utah. Following that, I hope to begin a career as a network engineer. I currently work as a Network Communication Systems Specialist for the Utah National Guard. I also have a CompTIA Security+ certification and hope to get my CCNA within the year.</p>
+    <!-- About Me Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4 text-center">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-9 text-secondary lead" style="font-size: 1.1rem; line-height: 1.7;">
+                    <p>
+                        I am a third-year Information Systems student at the University of Utah, with plans to graduate in 2028 and subsequently pursue a Master’s degree in Information Systems. Alongside my studies, I serve as a Network Communication Systems Specialist in the Utah National Guard, holding both CompTIA Security+ and CCNA certifications. My technical focus centers on tactical networking, enterprise routing, and bridging network infrastructure with modern artificial intelligence. I am deeply interested in leveraging AI tools for predictive data analysis and modern business process optimization, with long-term goals of advancing a career in network engineering and technological leadership.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Network Security</li>
-            <li>VoIP Technology</li>
-            <li>Satellite Communications</li>
-            <li>CompTIA Security+ Certified</li>
-        </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="fw-bold mb-4 text-center">Skills</h2>
+            <div class="row g-3 justify-content-center">
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-shield-check text-primary me-2"></i>Network Security</div></div>
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-telephone text-primary me-2"></i>VoIP Technology</div></div>
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-broadcast-pin text-primary me-2"></i>Satellite Communications</div></div>
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-diagram-3 text-primary me-2"></i>IP Routing & Switching</div></div>
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-code-slash text-primary me-2"></i>HTML / CSS / JavaScript</div></div>
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-robot text-primary me-2"></i>AI Prompt Engineering</div></div>
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-bar-chart text-primary me-2"></i>Data Analytics</div></div>
+                <div class="col-6 col-md-4 col-lg-3"><div class="p-3 border rounded text-center bg-white shadow-sm fw-semibold"><i class="bi bi-git text-primary me-2"></i>Git & GitHub</div></div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Project</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>AI Business Analysis</td>
-                    <td>Analyze business data using ChatGPT</td>
-                </tr>
-                <tr>
-                    <td>Data Visualization</td>
-                    <td>Dashboard built with Tableau</td>
-                </tr>
-                <tr>
-                    <td>Web Development</td>
-                    <td>Responsive Bootstrap website</td>
-                </tr>
-                <tr>
-                    <td>Process Improvement</td>
-                    <td>AI-assisted business workflow redesign</td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4 text-center">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">AI Business Analysis</h5>
+                            <p class="card-text text-secondary">Analyze complex business data and streamline decision-making processes using ChatGPT and AI models.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Data Visualization</h5>
+                            <p class="card-text text-secondary">Interactive business intelligence dashboards and operational visual analytics built with Tableau.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Web Development</h5>
+                            <p class="card-text text-secondary">Responsive, clean, and mobile-friendly portfolio website designed and deployed using Bootstrap and GitHub Pages.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Process Improvement</h5>
+                            <p class="card-text text-secondary">AI-assisted business workflow redesign focused on automating repetitive processes and optimizing performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Resume Coming Soon</p>
+    <!-- Resume Section -->
+    <section id="resume" class="section-padding">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Resume</h2>
+            <p class="text-secondary lead">Resume coming soon</p>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:u1474313@utah.edu">u1474313@utah.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/matt-howard8/" target="_blank">Matt Howard on LinkedIn</a></p>
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Get In Touch</h2>
+            <div class="d-flex justify-content-center gap-4 flex-wrap fs-5">
+                <a href="mailto:u1474313@utah.edu" class="text-white text-decoration-none"><i class="bi bi-envelope-fill me-2 text-primary"></i>u1474313@utah.edu</a>
+                <a href="https://github.com/mhoward8" target="_blank" class="text-white text-decoration-none"><i class="bi bi-github me-2 text-primary"></i>GitHub Profile</a>
+                <a href="https://www.linkedin.com/in/matt-howard8/" target="_blank" class="text-white text-decoration-none"><i class="bi bi-linkedin me-2 text-primary"></i>LinkedIn</a>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="py-3 bg-black text-center text-secondary">
+        <div class="container">
+            <small>&copy; Matt Howard. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
